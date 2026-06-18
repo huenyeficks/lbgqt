@@ -3,491 +3,189 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>LBGQT – Lennetaler Biergerichts Quertreiber</title>
-  <meta name="description" content="Der fiktive Onepager des LBGQT – Lennetaler Biergerichts Quertreiber." />
+  <title>Nordlicht Digitalwerk</title>
+  <meta name="description" content="Diese Website befindet sich im Aufbau." />
   <style>
     :root {
-      --bg: #111712;
-      --card: #182119;
-      --card2: #202b21;
-      --text: #f2f4ec;
-      --muted: #c6d0bd;
-      --green: #69b56b;
-      --green2: #9de28f;
-      --line: rgba(255,255,255,.12);
-      --shadow: 0 20px 60px rgba(0,0,0,.35);
-      --radius: 22px;
+      --bg1: #0f172a;
+      --bg2: #1e293b;
+      --card: rgba(255, 255, 255, 0.1);
+      --text: #f8fafc;
+      --muted: #cbd5e1;
+      --accent: #38bdf8;
+      --accent2: #a78bfa;
+      --border: rgba(255, 255, 255, 0.18);
     }
 
     * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+
     body {
       margin: 0;
+      min-height: 100vh;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       color: var(--text);
       background:
-        radial-gradient(circle at top left, rgba(105,181,107,.25), transparent 35%),
-        radial-gradient(circle at top right, rgba(157,226,143,.14), transparent 28%),
-        linear-gradient(180deg, #101610 0%, #172017 55%, #0e130f 100%);
-      line-height: 1.5;
-    }
-
-    a { color: inherit; }
-
-    .wrap {
-      width: min(1120px, calc(100% - 32px));
-      margin: 0 auto;
-    }
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      backdrop-filter: blur(14px);
-      background: rgba(17,23,18,.74);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 18px;
-      padding: 14px 0;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-weight: 800;
-      letter-spacing: .04em;
-    }
-
-    .logo {
-      width: 38px;
-      height: 38px;
+        radial-gradient(circle at 20% 20%, rgba(56, 189, 248, 0.28), transparent 28%),
+        radial-gradient(circle at 80% 30%, rgba(167, 139, 250, 0.22), transparent 30%),
+        linear-gradient(135deg, var(--bg1), var(--bg2));
       display: grid;
       place-items: center;
-      border-radius: 12px;
-      color: #102011;
-      background: linear-gradient(135deg, var(--green2), var(--green));
-      box-shadow: 0 0 0 4px rgba(105,181,107,.14);
-      font-weight: 900;
-    }
-
-    .links {
-      display: flex;
-      gap: 16px;
-      font-size: 14px;
-      color: var(--muted);
-    }
-
-    .links a {
-      text-decoration: none;
-    }
-
-    .links a:hover { color: var(--green2); }
-
-    .hero {
-      padding: 86px 0 52px;
-      display: grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap: 34px;
-      align-items: center;
-    }
-
-    .tag {
-      display: inline-flex;
-      gap: 8px;
-      align-items: center;
-      border: 1px solid rgba(157,226,143,.35);
-      background: rgba(157,226,143,.09);
-      color: var(--green2);
-      padding: 8px 12px;
-      border-radius: 999px;
-      font-size: 14px;
-      margin-bottom: 20px;
-    }
-
-    h1 {
-      font-size: clamp(42px, 8vw, 86px);
-      line-height: .92;
-      margin: 0 0 20px;
-      letter-spacing: -.06em;
-    }
-
-    .hero p {
-      max-width: 650px;
-      color: var(--muted);
-      font-size: clamp(18px, 2.5vw, 23px);
-      margin: 0 0 26px;
-    }
-
-    .buttons {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 999px;
-      padding: 13px 18px;
-      font-weight: 750;
-      text-decoration: none;
-      border: 1px solid var(--line);
-    }
-
-    .btn.primary {
-      color: #102011;
-      background: linear-gradient(135deg, var(--green2), var(--green));
-      border: 0;
-    }
-
-    .btn.secondary {
-      background: rgba(255,255,255,.05);
-      color: var(--text);
-    }
-
-    .poster {
-      border: 1px solid var(--line);
-      background: linear-gradient(160deg, rgba(255,255,255,.08), rgba(255,255,255,.03));
-      border-radius: 30px;
+      overflow: hidden;
       padding: 24px;
-      box-shadow: var(--shadow);
-      transform: rotate(1.5deg);
     }
 
-    .poster-inner {
-      border: 2px dashed rgba(157,226,143,.35);
-      border-radius: 22px;
-      padding: 26px;
-      min-height: 430px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      background:
-        linear-gradient(45deg, rgba(105,181,107,.08) 25%, transparent 25%),
-        linear-gradient(-45deg, rgba(105,181,107,.08) 25%, transparent 25%),
-        rgba(0,0,0,.13);
-      background-size: 32px 32px;
+    .orb {
+      position: fixed;
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      filter: blur(8px);
+      opacity: 0.35;
+      animation: float 8s ease-in-out infinite;
+      pointer-events: none;
     }
 
-    .stamp {
-      width: fit-content;
-      border: 3px solid var(--green2);
-      color: var(--green2);
-      padding: 8px 14px;
-      border-radius: 10px;
-      font-weight: 900;
-      transform: rotate(-7deg);
-      letter-spacing: .08em;
+    .orb.one {
+      left: -70px;
+      top: 20%;
+      background: var(--accent);
     }
 
-    .poster h2 {
-      font-size: 46px;
-      line-height: 1;
-      margin: 30px 0 12px;
-    }
-
-    .poster p { color: var(--muted); margin: 0; }
-
-    section { padding: 54px 0; }
-
-    .section-head {
-      display: flex;
-      justify-content: space-between;
-      align-items: end;
-      gap: 20px;
-      margin-bottom: 22px;
-    }
-
-    h2 {
-      font-size: clamp(30px, 5vw, 50px);
-      line-height: 1;
-      margin: 0;
-      letter-spacing: -.04em;
-    }
-
-    .section-head p {
-      max-width: 430px;
-      color: var(--muted);
-      margin: 0;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
+    .orb.two {
+      right: -80px;
+      bottom: 12%;
+      background: var(--accent2);
+      animation-delay: -3s;
     }
 
     .card {
-      border: 1px solid var(--line);
-      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.025));
-      border-radius: var(--radius);
-      padding: 22px;
-      min-height: 260px;
-      box-shadow: 0 12px 35px rgba(0,0,0,.18);
+      width: min(720px, 100%);
+      padding: clamp(28px, 6vw, 56px);
+      border: 1px solid var(--border);
+      border-radius: 32px;
+      background: var(--card);
+      backdrop-filter: blur(18px);
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
+      text-align: center;
+      animation: rise 700ms ease-out both;
+      position: relative;
+      overflow: hidden;
     }
 
-    .avatar {
-      width: 64px;
-      height: 64px;
-      border-radius: 20px;
-      background: linear-gradient(135deg, rgba(157,226,143,.95), rgba(105,181,107,.7));
-      color: #102011;
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: -2px;
+      background: linear-gradient(120deg, transparent, rgba(255,255,255,0.18), transparent);
+      transform: translateX(-100%);
+      animation: shine 4s ease-in-out infinite;
+    }
+
+    .content { position: relative; z-index: 1; }
+
+    .logo {
+      width: 76px;
+      height: 76px;
+      border-radius: 22px;
+      margin: 0 auto 22px;
       display: grid;
       place-items: center;
-      font-size: 30px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      box-shadow: 0 12px 34px rgba(56, 189, 248, 0.25);
+      animation: pulse 2.8s ease-in-out infinite;
       font-weight: 900;
-      margin-bottom: 16px;
+      font-size: 28px;
+      letter-spacing: -1px;
     }
 
-    .card h3 {
-      font-size: 24px;
-      margin: 0 0 4px;
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--accent);
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-size: 13px;
     }
 
-    .role {
-      color: var(--green2);
-      font-weight: 750;
-      margin-bottom: 14px;
+    h1 {
+      margin: 0;
+      font-size: clamp(36px, 8vw, 72px);
+      line-height: 0.95;
+      letter-spacing: -0.06em;
     }
 
-    .card p { color: var(--muted); margin: 0; }
-
-    .rules {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
+    p {
+      margin: 22px auto 0;
+      max-width: 560px;
+      color: var(--muted);
+      font-size: clamp(17px, 2.5vw, 21px);
+      line-height: 1.55;
     }
 
-    .rule {
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.04);
-      border-radius: var(--radius);
-      padding: 20px;
-    }
-
-    .rule strong {
-      color: var(--green2);
-      display: block;
-      margin-bottom: 6px;
-    }
-
-    .ticker {
+    .loader {
+      width: min(360px, 80%);
+      height: 12px;
+      margin: 34px auto 0;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.14);
       overflow: hidden;
-      border-block: 1px solid var(--line);
-      background: rgba(157,226,143,.07);
-      margin: 26px 0 0;
+      border: 1px solid rgba(255,255,255,0.12);
     }
 
-    .ticker-track {
-      display: flex;
-      width: max-content;
-      animation: move 26s linear infinite;
+    .loader span {
+      display: block;
+      width: 42%;
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      animation: loading 1.8s ease-in-out infinite;
     }
 
-    .ticker span {
-      padding: 14px 28px;
-      color: var(--green2);
-      font-weight: 800;
-      white-space: nowrap;
-    }
-
-    @keyframes move {
-      from { transform: translateX(0); }
-      to { transform: translateX(-50%); }
-    }
-
-    .join {
-      border: 1px solid rgba(157,226,143,.35);
-      background: linear-gradient(135deg, rgba(105,181,107,.18), rgba(255,255,255,.04));
-      border-radius: 30px;
-      padding: 32px;
-      display: grid;
-      grid-template-columns: 1fr .75fr;
-      gap: 24px;
-      align-items: center;
-    }
-
-    .join p { color: var(--muted); }
-
-    .formfake {
-      background: rgba(0,0,0,.18);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 18px;
-    }
-
-    .field {
-      border-bottom: 1px solid var(--line);
-      padding: 12px 0;
-      color: var(--muted);
-    }
-
-    footer {
-      color: var(--muted);
-      padding: 30px 0 46px;
-      border-top: 1px solid var(--line);
+    .footer {
+      margin-top: 34px;
+      color: rgba(248, 250, 252, 0.72);
       font-size: 14px;
     }
 
-    @media (max-width: 850px) {
-      .hero, .join { grid-template-columns: 1fr; }
-      .grid { grid-template-columns: 1fr; }
-      .rules { grid-template-columns: 1fr; }
-      .links { display: none; }
-      .poster { transform: none; }
-      .section-head { display: block; }
-      .section-head p { margin-top: 12px; }
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(22px) scale(0.98); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-28px) scale(1.08); }
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.06); }
+    }
+
+    @keyframes loading {
+      0% { transform: translateX(-120%); }
+      100% { transform: translateX(260%); }
+    }
+
+    @keyframes shine {
+      0%, 35% { transform: translateX(-100%); }
+      70%, 100% { transform: translateX(100%); }
     }
   </style>
 </head>
 <body>
-  <header>
-    <div class="wrap nav">
-      <div class="brand"><div class="logo">L</div><span>LBGQT</span></div>
-      <nav class="links" aria-label="Navigation">
-        <a href="#mitstreiter">Mitstreiter</a>
-        <a href="#satzung">Satzung</a>
-        <a href="#beitritt">Beitreten</a>
-      </nav>
+  <div class="orb one"></div>
+  <div class="orb two"></div>
+
+  <main class="card" aria-label="Website im Aufbau">
+    <div class="content">
+      <div class="logo" aria-hidden="true">ND</div>
+      <p class="eyebrow">Nordlicht Digitalwerk</p>
+      <h1>Hier entsteht etwas Neues.</h1>
+      <p>Unsere Website wird gerade vorbereitet. Bald findest du hier weitere Informationen.</p>
+      <div class="loader" aria-hidden="true"><span></span></div>
+      <div class="footer">Bitte schau später noch einmal vorbei.</div>
     </div>
-  </header>
-
-  <main>
-    <div class="wrap hero">
-      <div>
-        <div class="tag">Streng fiktiv. Halb geheim. Ganz unnötig.</div>
-        <h1>Lennetaler Biergerichts Quertreiber</h1>
-        <p>Der inoffizielle Zusammenschluss für Leute, die aus Versehen eine Meinung haben, sie aber lieber als Meme tarnen.</p>
-        <div class="buttons">
-          <a class="btn primary" href="#mitstreiter">Akte öffnen</a>
-          <a class="btn secondary" href="#beitritt">Aufnahmeantrag ansehen</a>
-        </div>
-      </div>
-
-      <aside class="poster" aria-label="Steckbrief-Plakat">
-        <div class="poster-inner">
-          <div class="stamp">GEHEIM</div>
-          <div>
-            <h2>Operation Quertopf</h2>
-            <p>Interne Losung: Erst posten, dann abstreiten, dann fragen, wer das gewesen sein soll.</p>
-          </div>
-          <p>Aktenzeichen: LBGQT-00-BIER</p>
-        </div>
-      </aside>
-    </div>
-
-    <div class="ticker" aria-hidden="true">
-      <div class="ticker-track">
-        <span>+++ Meme genehmigt vom Ausschuss für halbe Wahrheiten +++</span>
-        <span>+++ Niemand war es +++</span>
-        <span>+++ Screenshot liegt angeblich nicht vor +++</span>
-        <span>+++ Biergericht beobachtet +++</span>
-        <span>+++ Meme genehmigt vom Ausschuss für halbe Wahrheiten +++</span>
-        <span>+++ Niemand war es +++</span>
-        <span>+++ Screenshot liegt angeblich nicht vor +++</span>
-        <span>+++ Biergericht beobachtet +++</span>
-      </div>
-    </div>
-
-    <section id="mitstreiter">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>Die fiktiven Mitstreiter</h2>
-          <p>Alle Figuren sind erfunden. Ähnlichkeiten mit echten Personen sind höchstens ein Fall für den Festausschuss.</p>
-        </div>
-
-        <div class="grid">
-          <article class="card">
-            <div class="avatar">M</div>
-            <h3>Manfred Eimer</h3>
-            <div class="role">Oberster Meme-Beauftragter</div>
-            <p>Hat früher einfach den Raum betreten. Heute braucht er dafür ein Bild mit Text oben und unten. Sein Leitspruch: „Das war doch gar nicht von mir.“</p>
-          </article>
-
-          <article class="card">
-            <div class="avatar">S</div>
-            <h3>Siggi Screenshot</h3>
-            <div class="role">Leiter Beweissicherung</div>
-            <p>Speichert alles, findet aber nichts wieder. Behauptet trotzdem, er habe „da irgendwo noch was auf dem Handy“.</p>
-          </article>
-
-          <article class="card">
-            <div class="avatar">K</div>
-            <h3>Kalle Konjunktiv</h3>
-            <div class="role">Pressesprecher ohne Aussage</div>
-            <p>Sagt nie etwas direkt. Nur: „Könnte sein“, „munkelt man“ und „ich habe da nur was weitergeleitet“.</p>
-          </article>
-
-          <article class="card">
-            <div class="avatar">B</div>
-            <h3>Benni Bierfilter</h3>
-            <div class="role">Abteilung Stimmungskorrektur</div>
-            <p>Findet jede Idee nach dem dritten Bier besser. Nach dem fünften Bier war es dann angeblich seine eigene.</p>
-          </article>
-
-          <article class="card">
-            <div class="avatar">R</div>
-            <h3>Rudi Rückzieher</h3>
-            <div class="role">Chef fürs Dementi</div>
-            <p>Kommt immer erst dazu, wenn alles online ist. Löscht nichts, sagt aber laut: „Das ist aus dem Zusammenhang gerissen.“</p>
-          </article>
-
-          <article class="card">
-            <div class="avatar">T</div>
-            <h3>Thea Tarnkappe</h3>
-            <div class="role">Anonyme Qualitätssicherung</div>
-            <p>Prüft jeden Post auf drei Dinge: Ist es unnötig? Ist es verwirrend? Kann man später sagen, man war es nicht?</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="satzung">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>Auszug aus der Satzung</h2>
-          <p>Beschlossen irgendwann zwischen „noch ein Bier“ und „das posten wir aber nicht“.</p>
-        </div>
-
-        <div class="rules">
-          <div class="rule"><strong>§1 Zweck des Vereins</strong>Der Verein dient der Pflege des gepflegten Quertreibens bei maximaler Abstreitbarkeit.</div>
-          <div class="rule"><strong>§2 Postingpflicht</strong>Jedes Mitglied muss mindestens einmal pro Woche etwas teilen, das nur drei Leute verstehen.</div>
-          <div class="rule"><strong>§3 Beweislage</strong>Screenshots gelten nur, wenn sie verwackelt, abgeschnitten oder von Tante Erna weitergeleitet wurden.</div>
-          <div class="rule"><strong>§4 Öffentlichkeit</strong>Offiziell gibt es den Verein nicht. Inoffiziell hat er schon drei Arbeitsgruppen.</div>
-        </div>
-      </div>
-    </section>
-
-    <section id="beitritt">
-      <div class="wrap">
-        <div class="join">
-          <div>
-            <h2>Aufnahmeantrag</h2>
-            <p>Du möchtest fiktiv mitmachen? Dann erfülle mindestens zwei Voraussetzungen: Du hast eine starke Meinung, ein schwaches Alibi und mindestens 14 ungelesene Vereinsgruppen.</p>
-            <a class="btn primary" href="mailto:vorstand@lbgqt.de?subject=Fiktiver%20Aufnahmeantrag%20LBGQT">Fiktiv bewerben</a>
-          </div>
-          <div class="formfake" aria-label="Fiktiver Antrag">
-            <div class="field">Name: ____________________</div>
-            <div class="field">Lieblings-Ausrede: __________</div>
-            <div class="field">Meme-Erfahrung: □ ja □ wird abgestritten</div>
-            <div class="field">Unterschrift: nicht lesbar</div>
-          </div>
-        </div>
-      </div>
-    </section>
   </main>
-
-  <footer>
-    <div class="wrap">
-      Diese Seite ist Satire. Alle Namen und Rollen sind fiktiv. Keine echte Person soll dargestellt oder angegriffen werden.
-    </div>
-  </footer>
 </body>
 </html>
